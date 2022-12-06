@@ -1,17 +1,15 @@
-use std::path::Iter;
-
 fn main() {
-    let elves = lines();
     //let elves = ["A Y", "B X", "C Z"].iter();
-    day1(elves);
-    //day2(elves)
+    part1();
+    part2()
 }
 
-pub fn lines() ->impl Iterator<Item = &'static str> {
+pub fn lines() -> impl Iterator<Item = &'static str> {
     include_str!("../data/day2.txt").lines()
 }
 
-fn day1(elves: impl Iterator<Item = &'static str>) {
+fn part1() {
+    let elves = lines();
     let mut total_score: i32 = 0;
     for i in elves {
         match i { 
@@ -31,10 +29,11 @@ fn day1(elves: impl Iterator<Item = &'static str>) {
             _ => println!("No input!")
         }
     }
-    println!("Your total score is: {}", total_score)
+    println!("Part 1: The total score is: {}", total_score)
 }
 
-fn day2(elves: impl Iterator<Item = &'static str>) {
+fn part2() {
+    let elves = lines();
     let mut total_score: i32 = 0;
     for i in elves {
         match i {
@@ -54,5 +53,5 @@ fn day2(elves: impl Iterator<Item = &'static str>) {
             _ => println!("No input!")
         }
     }
-    println!("Your total score is: {}", total_score)
+    println!("Part 2: Your total score is: {}", total_score)
 }

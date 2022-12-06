@@ -16,10 +16,10 @@ fn main() {
             //println!("current elf size is: {}", current_elf)
         }
     }
-    println!("The biggest elf is: {} calories", biggest_elf);
+    println!("Part 1 :The biggest elf is: {} calories", biggest_elf);
     all_elves.sort();
     let sorted_elves: i32 = all_elves.iter().rev().take(3).sum();
-    println!("The top 3 elves are the carrying {} calories", sorted_elves)
+    println!("Part 2: The top 3 elves are the carrying {} calories", sorted_elves)
 }
 
 pub fn lines() ->impl Iterator<Item = &'static str> {
